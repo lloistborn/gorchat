@@ -65,18 +65,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-const alerter = __webpack_require__(1);
-alerter("tes");
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-module.exports = function(message) {
-    alert(message);
-}
+
 
 /***/ })
 /******/ ]);
