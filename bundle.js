@@ -18733,11 +18733,23 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
 
   render() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__channels_ChannelSection_jsx__["a" /* default */], {
-      channels: this.state.channels,
-      addChannel: this.addChannel.bind(this),
-      setChannel: this.setChannel.bind(this)
-    });
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'col s12' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'content' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'row' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__channels_ChannelSection_jsx__["a" /* default */], {
+            channels: this.state.channels,
+            addChannel: this.addChannel.bind(this),
+            setChannel: this.setChannel.bind(this)
+          })
+        )
+      )
+    );
   }
 }
 
@@ -18763,7 +18775,12 @@ class ChannelSection extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
+      { className: 'col s3' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'p',
+        { className: 'flat-text' },
+        'Channels'
+      ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__ChannelList_jsx__["a" /* default */], this.props),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ChannelForm_jsx__["a" /* default */], this.props)
     );
@@ -18882,10 +18899,16 @@ class ChannelForm extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'form',
       { onSubmit: this.onSubmit.bind(this) },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
-        type: 'text',
-        ref: 'channel'
-      })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'form-group' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+          'class': 'form-control',
+          placeholder: 'go',
+          type: 'text',
+          ref: 'channel'
+        })
+      )
     );
   }
 }

@@ -3,7 +3,7 @@ import ChannelSection from './channels/ChannelSection.jsx';
 
 class App extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       channels: []
     }
@@ -28,13 +28,15 @@ class App extends Component {
 
   render() {
     return(
-      <div className='app'>
-        <div className='nav'>
-          <ChannelSection
-            channels={this.state.channels}
-            addChannel={this.addChannel.bind(this)}
-            setChannel={this.setChannel.bind(this)}
-          />
+      <div className="col s12">
+        <div className="content">
+          <div className="row">
+            <ChannelSection
+              channels={this.state.channels}
+              addChannel={this.addChannel.bind(this)}
+              setChannel={this.setChannel.bind(this)}
+            />
+          </div>
         </div>
       </div>
     );
