@@ -6,7 +6,7 @@ import ChannelForm from './ChannelForm.jsx';
 class ChannelSection extends Component {
   render() {
     return (
-      <div className='col s3'>
+      <div className='col 12'>
         <h4 className="header">Channels</h4>      
         <ChannelList {...this.props} />
         <ChannelForm {...this.props} />
