@@ -12,11 +12,9 @@ class Channel extends Component {
     const { channel } = this.props;
 
     return (
-      <li className="collection-item">
-        <a className="collection-item" onClick={this.onClick.bind(this)}>
-          {channel.name}
-        </a>
-      </li>
+      <a href="#!" className="collection-item" onClick={this.onClick.bind(this)}>
+        {channel.name}
+      </a>
     );
   }
 }

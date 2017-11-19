@@ -5,8 +5,7 @@ import Channel from './Channel.jsx';
 class ChannelList extends Component {
   render() {
     return(
-      <ul className="collection with-header">
-        <li className="collection-header"><h4>Channels</h4></li>
+      <div className="collection">
         {
           this.props.channels.map((channel) => {
             return <Channel
@@ -16,7 +15,7 @@ class ChannelList extends Component {
             />
           })
         }
-        </ul>
+        </div>
     );
   }
 }
