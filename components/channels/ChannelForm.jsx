@@ -14,10 +14,14 @@ class ChannelForm extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit.bind(this)}>
-        <input 
-          type='text'
-          ref='channel'
-        />
+        <div className='form-group'>
+          <input 
+            class='form-control'
+            placeholder='go'
+            type='text'
+            ref='channel'
+          />
+        </div>
       </form>
     );
   }
