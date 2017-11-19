@@ -5,11 +5,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channels: []
+      channels: [],
+      activeChannel: {}
     }
   }
 
-  setChannel(activeChannel) {
+  setActiveChannel(activeChannel) {
     this.setState({ activeChannel });
 
     // TODO: get channels message
@@ -32,9 +33,9 @@ class App extends Component {
         <div className="content">
           <div className="row">
             <ChannelSection
-              channels={this.state.channels}
+              {...this.state}
               addChannel={this.addChannel.bind(this)}
-              setChannel={this.setChannel.bind(this)}
+              setActiveChannel={this.setActiveChannel.bind(this)}
             />
           </div>
         </div>

@@ -11,7 +11,7 @@ class ChannelList extends Component {
             return <Channel
               channel={channel}
               key={channel.id}
-              setChannel={this.props.setChannel}
+              {...this.props}
             />
           })
         }
@@ -22,7 +22,8 @@ class ChannelList extends Component {
 
 ChannelList.propTypes = {
   channels: PropTypes.array.isRequired,
-  setChannel: PropTypes.func.isRequired
-};
+  setActiveChannel: PropTypes.func.isRequired,
+  activeChannel: PropTypes.object.isRequired
+}
 
 export default ChannelList;
